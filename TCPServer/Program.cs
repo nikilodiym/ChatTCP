@@ -16,9 +16,9 @@ class Program
             Console.Title = "TCP Server (2 clients)";
             Console.WriteLine("Starting TCP server...");
 
-            _listener = new TcpListener(IPAddress.Any, 8888);
+            _listener = new TcpListener(IPAddress.Any, 150);
             _listener.Start();
-            Console.WriteLine("Server started on port 8888. Waiting for connections...");
+            Console.WriteLine("Server started on port 150. Waiting for connections...");
 
             // Start accepting clients
             var acceptTask = AcceptClientsAsync();

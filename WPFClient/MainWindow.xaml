@@ -11,6 +11,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <!-- something -->
         </Grid.RowDefinitions>
 
         <!-- IP і кнопка підключення -->

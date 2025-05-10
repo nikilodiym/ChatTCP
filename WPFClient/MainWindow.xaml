@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:WPFClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <!-- IP і кнопка підключення -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
+            <TextBox x:Name="IpTextBox" Width="200" Text="255.255.255.0" Margin="0 0 10 0"/>
+            <Button x:Name="ConnectButton" Width="100" Content="Connect"/>
+        </StackPanel>
+
+        <!-- Вивід повідомлень -->
+        <ListBox x:Name="MessagesListBox" Grid.Row="1" Margin="0 0 0 10"/>
+
+        <!-- Поле вводу повідомлення та кнопка -->
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBox x:Name="MessageTextBox" Width="600" Margin="0 0 10 0"/>
+            <Button x:Name="SendButton" Width="100" Content="Send"/>
+        </StackPanel>
     </Grid>
 </Window>

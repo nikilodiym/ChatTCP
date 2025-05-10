@@ -1,33 +1,47 @@
-﻿<Window x:Class="WPFClient.MainWindow"
+﻿<Window x:Class="TcpClientApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFClient"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TCP Client" Height="450" Width="600">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <!-- something -->
         </Grid.RowDefinitions>
 
-        <!-- IP і кнопка підключення -->
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
-            <TextBox x:Name="IpTextBox" Width="200" Text="255.255.255.0" Margin="0 0 10 0"/>
-            <Button x:Name="ConnectButton" Width="100" Content="Connect"/>
+        <!-- Connection Info -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,5">
+            <Label Content="Server IP:" Width="80"/>
+            <TextBox x:Name="IpTextBox" Width="120" Text="127.0.0.1"/>
+            <Label Content="Port:" Margin="10,0,0,0" Width="40"/>
+            <TextBox x:Name="PortTextBox" Width="60" Text="8888"/>
+            <Button x:Name="ConnectButton" Content="Connect" Margin="10,0,0,0" Width="80" Click="ConnectButton_Click"/>
         </StackPanel>
 
-        <!-- Вивід повідомлень -->
-        <ListBox x:Name="MessagesListBox" Grid.Row="1" Margin="0 0 0 10"/>
-
-        <!-- Поле вводу повідомлення та кнопка -->
-        <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <TextBox x:Name="MessageTextBox" Width="600" Margin="0 0 10 0"/>
-            <Button x:Name="SendButton" Width="100" Content="Send"/>
+        <!-- Client Info -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <Label Content="Your Name:" Width="80"/>
+            <TextBox x:Name="NameTextBox" Width="120"/>
         </StackPanel>
+
+        <!-- Message Input -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,5">
+            <TextBox x:Name="MessageTextBox" Width="400" KeyDown="MessageTextBox_KeyDown"/>
+            <Button x:Name="SendButton" Content="Send" Margin="10,0,0,0" Width="80" Click="SendButton_Click"/>
+        </StackPanel>
+
+        <!-- Message Log -->
+        <TextBox x:Name="LogTextBox" Grid.Row="3" Margin="0,10" 
+                 IsReadOnly="True" VerticalScrollBarVisibility="Auto"
+                 TextWrapping="Wrap" FontFamily="Consolas"/>
+
+        <!-- Status Bar -->
+        <StatusBar Grid.Row="4">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusText" Text="Disconnected"/>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

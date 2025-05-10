@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer", "TCPServer\TCPServer.csproj", "{AE36A8BD-7A9C-4808-8040-C1EF30D86CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFClient", "WPFClient\WPFClient.csproj", "{A12D8CEA-BFF7-4116-A5FB-D17E8E3CCA46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE36A8BD-7A9C-4808-8040-C1EF30D86CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE36A8BD-7A9C-4808-8040-C1EF30D86CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE36A8BD-7A9C-4808-8040-C1EF30D86CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE36A8BD-7A9C-4808-8040-C1EF30D86CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A12D8CEA-BFF7-4116-A5FB-D17E8E3CCA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A12D8CEA-BFF7-4116-A5FB-D17E8E3CCA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A12D8CEA-BFF7-4116-A5FB-D17E8E3CCA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A12D8CEA-BFF7-4116-A5FB-D17E8E3CCA46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
